@@ -66,32 +66,36 @@ function Login() {
     }
 
 
-  async function handleupdateInfo(e) {
-    e.preventDefault();
-    try {
-    var response = await axios.put(`http://127.0.0.1:4000/customers/${user}`,
-    {
-      first_name: userfName,
-      last_name: userlName,
-      address: userAddress,
-      email_address: userEmail,
-      phone_number: userPhone,
-      password: userPassword
-    },
-        {
-            method: 'PUT',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json' 
-            }, })
-    const updatedCustomer = response.data;
-    setEditMsg("You have successfully updated your details");
-    setCustomerData(updatedCustomer);
-    setEditMode(false);
-  } catch(e) {
-    setEditMsg(e.response.error)
-  }
-  }
+    async function handleupdateInfo(e) {
+      e.preventDefault();
+      try {
+        // Update the state values before making the API call
+        const updatedCustomerData = {
+          first_name: userfName || customerData.first_name,
+          last_name: userlName || customerData.last_name,
+          address: userAddress || customerData.address,
+          email_address: userEmail || customerData.email_address,
+          phone_number: userPhone || customerData.phone_number,
+          password: userPassword || customerData.password
+        };
+    
+        // Make the API call to update the customer details
+        const response = await axios.put(`http://127.0.0.1:4000/customers/${user}`, updatedCustomerData, {
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        });
+    
+        const updatedCustomer = response.data;
+        setEditMsg("You have successfully updated your details");
+        setCustomerData(updatedCustomer);
+        setEditMode(false);
+      } catch (e) {
+        setEditMsg(e.response.error);
+      }
+    }
+    
   function handleBacktoInfo() {
     setEditMode(false);
   }
@@ -101,6 +105,7 @@ function Login() {
     setLoggedIn(false);
     setCustomerData(null);
     navigate('/login');
+    window.location.reload();
   }
   useEffect(() => {
     async function fetchOrderEmail() {
@@ -178,6 +183,7 @@ function Login() {
                           <h2>Welcome back, {customerData.first_name}!</h2><br/><br/>
                           {!editMode ? (
                           <>
+                          <p>{editMsg}</p>
                           <p>Profile information:</p>
                           <ul>
                               <li>First Name: {customerData.first_name}</li>
@@ -213,7 +219,6 @@ function Login() {
                               <input value={userPhone} type="number" className="form-control" placeholder="Phone Number" onChange={handlePhone}/><br/>
                               <button className="btn btn-outline-secondary btn-sm" onClick={handleupdateInfo}>Update</button>
                              <button className="btn btn-outline-secondary btn-sm" onClick={handleBacktoInfo}>Back to your account</button>
-                              <p>{editMsg}</p>
                             </form>
                           </div>
                           )}

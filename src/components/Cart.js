@@ -50,44 +50,41 @@ function Cart({ cartItems, setCartItems, user}) {
 }, [])
 
 //create a new order in backend
-  async function addToCart(e) {
-    e.preventDefault();
-    if (cartItems.length === 0) {
-      console.log("No items in the cart");
-      return (
-        setEmptyMsg("Oops looks like your cart is empty, please add items before checking out!")
-      );
-    }
-    const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
-    if (totalQuantity === 0) {
-      console.log("Cart is empty");
-      return setEmptyMsg("Oops looks like your cart is empty, please add items before checking out!");
-    }
-    
-    const newOrderTitles = cartItems.map(({ title }) => title).join(', ');
-    const newOrderDescription = cartItems.map(({ description }) => description).join(', ');
-   
-    try {
-      const response = await axios.post(
-        "http://localhost:4000/orders",
-        {
-          title: newOrderTitles,
-          description: newOrderDescription,
-          price: totalPrice,
-          quantity: totalQuantity,
-          email_address: userEmail,
-        },
-        { headers: { Accept: "application/json" } }
-      );
-      // Update cart state
-      setCartItems([]);
-      return (
-        setConfirmationMsg(`Thanks for your order ${userfName}, your delivery is on its way!`)
-      );
-    } catch (error) {
-      console.error(error);
-    }
+async function addToCart(e) {
+  e.preventDefault();
+  if (cartItems.length === 0) {
+    console.log("No items in the cart");
+    return setEmptyMsg("Oops looks like your cart is empty, please add items before checking out!");
   }
+  const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
+  if (totalQuantity === 0) {
+    console.log("Cart is empty");
+    return setEmptyMsg("Oops looks like your cart is empty, please add items before checking out!");
+  }
+
+  const newOrderTitles = cartItems.map(({ title }) => title).join(', ');
+  const newOrderDescription = cartItems.map(({ description }) => description).join(', ');
+
+  try {
+    const response = await axios.post(
+      "http://localhost:4000/orders",
+      {
+        title: newOrderTitles,
+        description: newOrderDescription,
+        price: sumGrossCost,
+        quantity: totalQuantity,
+        email_address: userEmail,
+        order_items: cartItems, 
+      },
+      { headers: { Accept: "application/json" } }
+    );
+    // Update cart state
+    setCartItems([]);
+    return setConfirmationMsg(`Thanks for your order ${userfName}, your delivery is on its way!`);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
   //add or remove products functionality
   const handleQuantityChange = (index, quantityChange) => {
@@ -117,7 +114,6 @@ function Cart({ cartItems, setCartItems, user}) {
    
   const sumGrossCost = grossCost.reduce((total, price) => total + parseFloat(price), 0).toFixed(2);
   const sumTotalItems = totalItems.reduce((total, quantity) => total + quantity, 0)
-  console.log(itemCount)
 
   //Checkout Details
   const { register, handleSubmit, formState: { errors } } = useForm();
@@ -175,7 +171,6 @@ function Cart({ cartItems, setCartItems, user}) {
             <div className="card-body">        
               <div>
                 <p className="cart">Number of Item(s) in cart: {sumTotalItems}<br/><br/>Total to pay: € {sumGrossCost}</p>
-
               </div>
             </div>
           </div>
