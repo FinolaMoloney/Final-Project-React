@@ -20,7 +20,6 @@ function Login() {
   const [userPassword, setUserPassword] = useState("");
   const [editMsg, setEditMsg] = useState([]);
   const [editMode, setEditMode] = useState(false);
-  const [viewOrdersMode, setViewOrdersMode] = useState(false);
   const [loggedOut, setLoggedOut] = useState(false);
   const [orderHistory, setOrderHistory] = useState([]);
   const [orderEmail, setOrderEmail] = useState('');
@@ -144,7 +143,7 @@ function Login() {
   return (
     <div className="background">
       <div className="row banner">
-        <h3>Your Account</h3>
+        <h3>YOUR ACCOUNT</h3>
       </div>     
         <div className="container">
             <div className="row">
