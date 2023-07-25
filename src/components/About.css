@@ -9,3 +9,8 @@
 .textPara {
     text-align: justify;
 }
+
+.space{
+    justify-content:space-between;
+	text-align:justify;
+}

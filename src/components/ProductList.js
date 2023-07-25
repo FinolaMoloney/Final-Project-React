@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Product from './Product';
+import NourishAndSproutLasagne from '../images/products/NourishAndSproutLasagne.jpg';
 
 function ProductList({ cartItems, setCartItems  }) {
     const [productList, setProductList] = useState([]);
@@ -72,6 +73,7 @@ function ProductList({ cartItems, setCartItems  }) {
                     </div>
                 <div className="row">
                     {productList.map(function (product, index) {
+                    console.log("Image URL:", product.image_url);
                     if (
                         (dietFilter === 'gluten' && ageFilter === '') &&
                         product.gluten_free
@@ -83,8 +85,8 @@ function ProductList({ cartItems, setCartItems  }) {
                                     <Product
                                     title={product.title}
                                     description={product.description}
-                                    price={product.price}
-                                    stock={product.stock} gluten_free={product.gluten_free} diary_free={product.diary_free}
+                                    price={'€'+product.price}
+                                    stock={product.stock} gluten_free={product.gluten_free} diary_free={product.diary_free} image_url={product.image_url}
                                     />
                                     <button
                                     className="btn btn-outline-secondary btn-sm"
@@ -107,10 +109,11 @@ function ProductList({ cartItems, setCartItems  }) {
                                     <Product
                                     title={product.title}
                                     description={product.description}
-                                    price={product.price}
+                                    price={'€'+product.price}
                                     stock={product.stock}
                                     gluten_free={product.gluten_free}
                                     diary_free={product.diary_free}
+                                     image_url={product.image_url}
                                     />
                                     <button
                                     className="btn btn-outline-secondary btn-sm"
@@ -134,10 +137,11 @@ function ProductList({ cartItems, setCartItems  }) {
                                         <Product
                                         title={product.title}
                                         description={product.description}
-                                        price={product.price}
+                                        price={'€'+product.price}
                                         stock={product.stock}
                                         gluten_free={product.gluten_free}
                                         diary_free={product.diary_free}
+                                         image_url={product.image_url}
                                         />
                                         <button
                                         className="btn btn-outline-secondary btn-sm"
@@ -161,10 +165,11 @@ function ProductList({ cartItems, setCartItems  }) {
                                             <Product
                                             title={product.title}
                                             description={product.description}
-                                            price={product.price}
+                                            price={'€'+product.price}
                                             stock={product.stock}
                                             gluten_free={product.gluten_free}
                                             diary_free={product.diary_free}
+                                             image_url={product.image_url}
                                             />
                                             <button
                                             className="btn btn-outline-secondary btn-sm"
@@ -188,10 +193,11 @@ function ProductList({ cartItems, setCartItems  }) {
                                             <Product
                                             title={product.title}
                                             description={product.description}
-                                            price={product.price}
+                                            price={'€'+product.price}
                                             stock={product.stock}
                                             gluten_free={product.gluten_free}
                                             diary_free={product.diary_free}
+                                             image_url={product.image_url}
                                             />
                                             <button
                                             className="btn btn-outline-secondary btn-sm"
@@ -214,10 +220,11 @@ function ProductList({ cartItems, setCartItems  }) {
                                                 <Product
                                                 title={product.title}
                                                 description={product.description}
-                                                price={product.price}
+                                                price={'€'+product.price}
                                                 stock={product.stock}
                                                 gluten_free={product.gluten_free}
                                                 diary_free={product.diary_free}
+                                                image_url={product.image_url}
                                                 />
                                                 <button
                                                 className="btn btn-outline-secondary btn-sm"
