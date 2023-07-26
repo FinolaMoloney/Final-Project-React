@@ -5,7 +5,7 @@ import NourishAndSproutSmallLogo from '../images/home/NourishAndSproutSmallLogo.
 
 function Navbar() {
     return (
-        <div>
+        <div className="navbar-wrapper">
             <nav className="navbar navbar-expand-sm">
                 <div className="d-flex logoTop" >
                     <img className="img-fluid" src={NourishAndSproutSmallLogo} width="100" height="100" alt="NourishAndSproutLogo" />

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-scroll';
 import axios from 'axios';
 import Product from './Product';
+import './Product.css'
 import NourishAndSproutGFIcon from '../images/products/NourishAndSproutGFIcon.jpg';
 import NourishAndSproutDFIcon from '../images/products/NourishAndSproutDFIcon.jpg';
 
@@ -48,11 +49,11 @@ function ProductList({ cartItems, setCartItems  }) {
             </div>
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-sm-3 ">
+                    <div className="col-sm-3 filters">
                         <h6>Filter by dietary requirement here</h6>
                         <select
                         value={dietFilter}
-                        className="btn btn-outline-secondary btn-sm"
+                        className="btn btn-outline-secondary btn-sm filters"
                         type="dropdown"
                         onChange={handleDietFilterChange}
                         >
@@ -61,7 +62,7 @@ function ProductList({ cartItems, setCartItems  }) {
                             <option value="diary">Diary Free</option>
                         </select>
                     </div>
-                    <div className="col-sm-9">
+                    <div className="col-sm-8">
                             <h6>Filter by age group here</h6>
 
                             <select
@@ -71,9 +72,9 @@ function ProductList({ cartItems, setCartItems  }) {
                             onChange={handleAgeFilterChange}
                             >
                                 <option value="">All</option>
-                                <option value="6-12M">6-12 Months</option>
-                                <option value="1-2Y">1-2 Years</option>
-                                <option value="2-4Y">2-4 Years</option>
+                                <option value="6-12M">6 Months+</option>
+                                <option value="1-2Y">1 Year+</option>
+                                <option value="2-4Y">2 Years+</option>
                             </select>
                         </div>
                     </div>
@@ -86,14 +87,8 @@ function ProductList({ cartItems, setCartItems  }) {
                     ) {
                     return (
                         <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
-                            <div className="card h-100">
+                            <div className="card">
                                 <div className="card-body">
-                                {product.gluten_free && (
-                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
-                                            )}
-                                            {product.gluten_free && (
-                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
-                                            )}
                                     <Product
                                     title={product.title}
                                     description={product.description}
@@ -105,7 +100,19 @@ function ProductList({ cartItems, setCartItems  }) {
                                     onClick={() => addItemToCart(index)}
                                     >
                                         Add to Cart
-                                    </button>
+                                    </button><br/><br/>
+                                    <div className="row">
+                                        <div className="col-sm-1">
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                        </div>
+                                        <div className="col-sm-1">
+                                            {product.diary_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -116,14 +123,8 @@ function ProductList({ cartItems, setCartItems  }) {
                     ) {
                     return (
                         <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
-                            <div className="card h-100">
+                            <div className="card">
                                 <div className="card-body">
-                                {product.gluten_free && (
-                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
-                                            )}
-                                            {product.gluten_free && (
-                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
-                                            )}
                                     <Product
                                     title={product.title}
                                     description={product.description}
@@ -138,7 +139,19 @@ function ProductList({ cartItems, setCartItems  }) {
                                     onClick={() => addItemToCart(index)}
                                     >
                                     Add to Cart
-                                    </button>
+                                    </button><br/><br/>
+                                    <div className="row">
+                                        <div className="col-sm-1">
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                        </div>
+                                        <div className="col-sm-1">
+                                            {product.diary_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -150,14 +163,8 @@ function ProductList({ cartItems, setCartItems  }) {
                         ) {
                         return (
                             <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
-                                <div className="card h-100">
+                                <div className="card">
                                     <div className="card-body">
-                                    {product.gluten_free && (
-                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
-                                            )}
-                                            {product.gluten_free && (
-                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
-                                            )}
                                         <Product
                                         title={product.title}
                                         description={product.description}
@@ -172,7 +179,19 @@ function ProductList({ cartItems, setCartItems  }) {
                                         onClick={() => addItemToCart(index)}
                                         >
                                         Add to Cart
-                                        </button>
+                                        </button><br/><br/>
+                                        <div className="row">
+                                            <div className="col-sm-1">
+                                                {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                                )}
+                                            </div>
+                                            <div className="col-sm-1">
+                                                {product.diary_free && (
+                                                    <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                                )}
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -184,14 +203,8 @@ function ProductList({ cartItems, setCartItems  }) {
                             ) {
                             return (
                                 <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
-                                    <div className="card h-100">
+                                    <div className="card">
                                         <div className="card-body">
-                                        {product.gluten_free && (
-                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
-                                            )}
-                                            {product.gluten_free && (
-                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
-                                            )}
                                             <Product
                                             title={product.title}
                                             description={product.description}
@@ -206,7 +219,19 @@ function ProductList({ cartItems, setCartItems  }) {
                                             onClick={() => addItemToCart(index)}
                                             >
                                             Add to Cart
-                                            </button>
+                                            </button><br/><br/>
+                                            <div className="row">
+                                                <div className="col-sm-1">
+                                                    {product.gluten_free && (
+                                                        <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                                    )}
+                                                </div>
+                                                <div className="col-sm-1">
+                                                    {product.diary_free && (
+                                                        <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -218,14 +243,8 @@ function ProductList({ cartItems, setCartItems  }) {
                             ) {
                             return (
                                 <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
-                                    <div className="card h-100">
+                                    <div className="card">
                                         <div className="card-body">
-                                        {product.gluten_free && (
-                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
-                                            )}
-                                            {product.gluten_free && (
-                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
-                                            )}
                                             <Product
                                             title={product.title}
                                             description={product.description}
@@ -240,7 +259,19 @@ function ProductList({ cartItems, setCartItems  }) {
                                             onClick={() => addItemToCart(index)}
                                             >
                                             Add to Cart
-                                            </button>
+                                            </button><br/><br/>
+                                            <div className="row">
+                                                <div className="col-sm-1">
+                                                    {product.gluten_free && (
+                                                        <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                                    )}
+                                                </div>
+                                                <div className="col-sm-1">
+                                                    {product.diary_free && (
+                                                        <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                                    )}
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -251,14 +282,8 @@ function ProductList({ cartItems, setCartItems  }) {
                                 ) {
                                 return (
                                     <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
-                                        <div className="card h-100">
+                                        <div className="card">
                                             <div className="card-body">
-                                            {product.gluten_free && (
-                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
-                                            )}
-                                            {product.gluten_free && (
-                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
-                                            )}
                                                 <Product
                                                 image_url={getImageFilePath(product.id)}
                                                 title={product.title}
@@ -273,7 +298,19 @@ function ProductList({ cartItems, setCartItems  }) {
                                                 onClick={() => addItemToCart(index)}
                                                 >
                                                 Add to Cart
-                                                </button>
+                                                </button><br/><br/>
+                                                <div className="row">
+                                                    <div className="col-sm-1">
+                                                        {product.gluten_free && (
+                                                            <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                                        )}
+                                                    </div>
+                                                    <div className="col-sm-1">
+                                                        {product.diary_free && (
+                                                            <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                                        )}
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

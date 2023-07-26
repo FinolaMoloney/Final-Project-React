@@ -1,6 +1,11 @@
 .navbar {
     background-color: rgb(255, 192, 203);
  }
+
+ .navbar-wrapper {
+  width: 100%;
+}
+
  .logoImage {
    background-color: rgb(255, 192, 203);
  }

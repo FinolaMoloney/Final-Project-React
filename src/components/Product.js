@@ -14,15 +14,14 @@ function Product(props) {
             <p>
                 {props.price}
             </p>
-            <p>
+            {/*<p>
                 {props.stock ? "In Stock" : "Out of Stock"}
-            </p>
-            <p>
-                {props.gluten_free ? "Gluten Free" : "Not Gluten Free"}
-            </p>
-            <p>
-                {props.diary_free ? "Dairy Free" : "Not Dairy Free"}
-            </p>
+            
+            <small>
+                {props.gluten_free ? "" : " *Contains Gluten "}
+                {props.diary_free ? "" : " *Contains Dairy "}
+            </small>
+            </p>*/}
         </div>
     )
 }
