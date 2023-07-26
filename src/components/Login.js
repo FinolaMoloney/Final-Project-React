@@ -25,6 +25,7 @@ function Login() {
   const [orderEmail, setOrderEmail] = useState('');
   const navigate = useNavigate();
   const [orderExists, setOrderExists] = useState(false);
+  const [loginFailMsg, setLoginFailMsg] = useState('');
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -41,7 +42,7 @@ function Login() {
         setCustomerData(matchedCustomer);
         setUser(matchedCustomer.id);
       } else {
-        return('Login failed!');
+        setLoginFailMsg("Incorrect details entered please try again.");
       }
     } catch (error) {
       console.error('Error occurred:', error);
@@ -176,6 +177,7 @@ function Login() {
                             />
                         </Form.Group>
                         <button className="btn btn-outline-secondary btn-sm" type="submit">Submit</button>
+                        <p>{loginFailMsg}</p>
                         </Form>
                     ) : (
                         <div className="col-sm-12">

@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
+import {Link} from 'react-scroll';
 import axios from 'axios';
 import Product from './Product';
-import NourishAndSproutLasagne from '../images/products/NourishAndSproutLasagne.jpg';
+import NourishAndSproutGFIcon from '../images/products/NourishAndSproutGFIcon.jpg';
+import NourishAndSproutDFIcon from '../images/products/NourishAndSproutDFIcon.jpg';
 
 function ProductList({ cartItems, setCartItems  }) {
     const [productList, setProductList] = useState([]);
@@ -33,11 +35,15 @@ function ProductList({ cartItems, setCartItems  }) {
         const selectedProduct = productList[index];
         setCartItems((prevCartItems) => [...prevCartItems, selectedProduct]);
         navigate('/cart');
-      };
-      
+    };
+
+    function getImageFilePath(productId) {
+        return `${process.env.PUBLIC_URL}/images/products/NourishAndSprout${productId}.jpg`;
+    }
+       
     return (
         <div className="background">           
-            <div className="row banner">
+            <div className="row banner" id="back">
                 <h3>SHOP HERE</h3>
             </div>
             <div className="container-fluid">
@@ -73,7 +79,7 @@ function ProductList({ cartItems, setCartItems  }) {
                     </div>
                 <div className="row">
                     {productList.map(function (product, index) {
-                    console.log("Image URL:", product.image_url);
+                        const imageFilePath = getImageFilePath(product.id);
                     if (
                         (dietFilter === 'gluten' && ageFilter === '') &&
                         product.gluten_free
@@ -82,11 +88,17 @@ function ProductList({ cartItems, setCartItems  }) {
                         <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                             <div className="card h-100">
                                 <div className="card-body">
+                                {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
                                     <Product
                                     title={product.title}
                                     description={product.description}
                                     price={'€'+product.price}
-                                    stock={product.stock} gluten_free={product.gluten_free} diary_free={product.diary_free} image_url={product.image_url}
+                                    stock={product.stock} gluten_free={product.gluten_free} diary_free={product.diary_free} image_url={getImageFilePath(product.id)}
                                     />
                                     <button
                                     className="btn btn-outline-secondary btn-sm"
@@ -106,6 +118,12 @@ function ProductList({ cartItems, setCartItems  }) {
                         <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                             <div className="card h-100">
                                 <div className="card-body">
+                                {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
                                     <Product
                                     title={product.title}
                                     description={product.description}
@@ -113,7 +131,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                     stock={product.stock}
                                     gluten_free={product.gluten_free}
                                     diary_free={product.diary_free}
-                                     image_url={product.image_url}
+                                    image_url={getImageFilePath(product.id)}
                                     />
                                     <button
                                     className="btn btn-outline-secondary btn-sm"
@@ -134,6 +152,12 @@ function ProductList({ cartItems, setCartItems  }) {
                             <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                 <div className="card h-100">
                                     <div className="card-body">
+                                    {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
                                         <Product
                                         title={product.title}
                                         description={product.description}
@@ -141,7 +165,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                         stock={product.stock}
                                         gluten_free={product.gluten_free}
                                         diary_free={product.diary_free}
-                                         image_url={product.image_url}
+                                        image_url={getImageFilePath(product.id)}
                                         />
                                         <button
                                         className="btn btn-outline-secondary btn-sm"
@@ -162,6 +186,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                 <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                     <div className="card h-100">
                                         <div className="card-body">
+                                        {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
                                             <Product
                                             title={product.title}
                                             description={product.description}
@@ -169,7 +199,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                             stock={product.stock}
                                             gluten_free={product.gluten_free}
                                             diary_free={product.diary_free}
-                                             image_url={product.image_url}
+                                            image_url={getImageFilePath(product.id)}
                                             />
                                             <button
                                             className="btn btn-outline-secondary btn-sm"
@@ -190,6 +220,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                 <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                     <div className="card h-100">
                                         <div className="card-body">
+                                        {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
                                             <Product
                                             title={product.title}
                                             description={product.description}
@@ -197,7 +233,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                             stock={product.stock}
                                             gluten_free={product.gluten_free}
                                             diary_free={product.diary_free}
-                                             image_url={product.image_url}
+                                            image_url={getImageFilePath(product.id)}
                                             />
                                             <button
                                             className="btn btn-outline-secondary btn-sm"
@@ -217,14 +253,20 @@ function ProductList({ cartItems, setCartItems  }) {
                                     <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                         <div className="card h-100">
                                             <div className="card-body">
+                                            {product.gluten_free && (
+                                                    <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
+                                            )}
+                                            {product.gluten_free && (
+                                                <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
+                                            )}
                                                 <Product
+                                                image_url={getImageFilePath(product.id)}
                                                 title={product.title}
                                                 description={product.description}
                                                 price={'€'+product.price}
                                                 stock={product.stock}
                                                 gluten_free={product.gluten_free}
                                                 diary_free={product.diary_free}
-                                                image_url={product.image_url}
                                                 />
                                                 <button
                                                 className="btn btn-outline-secondary btn-sm"
@@ -239,6 +281,10 @@ function ProductList({ cartItems, setCartItems  }) {
                                 }
                     return null;
                     })}
+                    <div class="row">
+				        <button class="col-sm-1 btn btn-outline-secondary btn-sm"><Link to="back" smooth={true} duration={500}>Back to Top</Link></button>
+                        <small className="col-sm-11 disclaimer">*Please note all products marked with DF are diary free and all products marked with GF are gluten free</small>
+			        </div>
                 </div>
             </div>
         </div>

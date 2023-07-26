@@ -32,7 +32,7 @@ function About(){
                 </div>
                 <div className="row">
                     <div className="col">
-                        <h3>FAQ</h3>
+                        <h3>FAQs</h3>
                         <div className="card faq-card">
                             <h6>What can we do if we have an issue with our order?</h6>
                             <div className="card-body">

@@ -1,13 +1,10 @@
 import React from 'react';
+import './Product.css'
 
 function Product(props) {
     return (
         <div>
-            {props.image_url ? (
-                <img src={props.image_url} alt={props.title} />
-            ) : (
-                <p>No Image Available</p>
-            )}
+            <img className="productImg" src={props.image_url} alt={props.title} />
             <h3>
                 {props.title}
             </h3>

@@ -93,7 +93,7 @@ function Signup() {
                                     placeholder="First Name"
                                     {...register("name", { required: "First Name is required" })} />
                                     {errors.name && (<small>{errors.name.message}</small>)}
-                                </div>
+                                </div><br/>
                                 <div>
                                     <input 
                                     type="text" 
@@ -101,7 +101,7 @@ function Signup() {
                                     placeholder="Last Name" 
                                     {...register("lastName", { required: "Last Name is required" })} />
                                     {errors.lastName && (<small>{errors.lastName.message}</small>)}
-                                </div>
+                                </div><br/>
                                 <div>
                                     <input 
                                     type="text" 
@@ -109,7 +109,7 @@ function Signup() {
                                     placeholder="Address" 
                                     {...register("address", { required: "Address is required" })} />
                                     {errors.address && (<small>{errors.address.message}</small>)}
-                                </div>
+                                </div><br/>
                                 <div>
                                     <input 
                                     type="number" 
@@ -117,7 +117,7 @@ function Signup() {
                                     placeholder="Phone Number" 
                                     {...register("phoneNumber", { required: "Phone Number is required" })} />
                                     {errors.phoneNumber && (<small>{errors.phoneNumber.message}</small>)}
-                                </div>
+                                </div><br/>
                                 <div>
                                     <input 
                                     type="text" 
@@ -131,7 +131,7 @@ function Signup() {
                                         }
                                     })}/>
                                     {errors.email && (<small>{errors.email.message}</small>)}
-                                </div>
+                                </div><br/>
                                 <div>
                                     <input
                                         type="password"
@@ -140,7 +140,7 @@ function Signup() {
                                         {...register('password', { required: 'Password is required' })}
                                     />
                                     {errors.password && <small>{errors.password.message}</small>}
-                                </div>
+                                </div><br/>
                                 <div>
                                     <input
                                         type="password"
