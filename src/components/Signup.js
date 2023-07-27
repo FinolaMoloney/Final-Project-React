@@ -81,7 +81,7 @@ function Signup() {
                         <h3>SIGN UP BELOW</h3>
                         {formSubmitted ? (
                             <div className="contactFormBorder">
-                                <p>{userfName}, you have successfully signed up!</p>
+                                <p>Welcome to the Nourish and Sprout family {userfName}! Please log in to see your details.</p>
                             </div>
                             ) : (
                             <form className="contactFormBorder" onSubmit={handleSubmit(onSubmit)}>

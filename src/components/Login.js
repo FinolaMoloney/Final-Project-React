@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
 import './SignUp.css';
-import Product from './Product';
 import NourishAndSproutLogo from '../images/home/NourishAndSproutLogo.jpg';
 
 function Login() {
@@ -16,8 +15,7 @@ function Login() {
   const [userlName, setUserLName] = useState("");
   const [userAddress, setAddress] = useState("");
   const [userPhone, setPhone] = useState();
-  const [userEmail, setUserEmail] = useState("");
-  const [userPassword, setUserPassword] = useState("");
+  const [userEmail, userPassword] = useState("");
   const [editMsg, setEditMsg] = useState([]);
   const [editMode, setEditMode] = useState(false);
   const [loggedOut, setLoggedOut] = useState(false);
@@ -132,12 +130,9 @@ function Login() {
       setOrderExists(orderExists);
   
       if (!orderExists) {
-        // Email has no previous orders
-        console.log('No previous orders');
-        
+        // Email has no previous orders        
       } else {
         // Email has previous orders
-        console.log('Previous orders found');
         const userOrders = orders.filter(order => order.email === data.email);
         setOrderHistory(userOrders);
       }
@@ -182,7 +177,7 @@ function Login() {
                     ) : (
                         <div className="col-sm-12">
                           <button className="btn btn-outline-secondary btn-sm logout-btn"onClick={handleLogout}>Logout</button>
-                          <h2>Welcome back, {customerData.first_name}!</h2><br/><br/>
+                          <h2>Welcome back {customerData.first_name}</h2><br/><br/>
                           {!editMode ? (
                           <>
                           <p>{editMsg}</p>

@@ -3,7 +3,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import '../components/Home.css';
 import NourishAndSproutHomeImage from '../images/home/NourishAndSproutHomeImage.jpg';
 import NourishAndSproutBabySoupAndVeg from '../images/home/NourishAndSproutBabySoupAndVeg.jpg';
-import NourishAndSproutLogo from '../images/home/NourishAndSproutLogo.jpg';
 import NourishAndSproutFreshVeg from '../images/home/NourishAndSproutFreshVeg.jpg';
 import NourishAndSproutGlutenFreeImg from '../images/home/NourishAndSproutGlutenFreeImg.jpg';
 import NourishAndSproutIcePops from '../images/home/NourishAndSproutIcePops.jpg';

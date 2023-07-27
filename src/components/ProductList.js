@@ -88,7 +88,7 @@ function ProductList({ cartItems, setCartItems  }) {
                     return (
                         <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                             <div className="card">
-                                <div className="card-body">
+                                <div className="card-body shop-card">
                                     <Product
                                     title={product.title}
                                     description={product.description}
@@ -124,7 +124,7 @@ function ProductList({ cartItems, setCartItems  }) {
                     return (
                         <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                             <div className="card">
-                                <div className="card-body">
+                                <div className="card-body shop-card">
                                     <Product
                                     title={product.title}
                                     description={product.description}
@@ -164,7 +164,7 @@ function ProductList({ cartItems, setCartItems  }) {
                         return (
                             <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                 <div className="card">
-                                    <div className="card-body">
+                                    <div className="card-body shop-card">
                                         <Product
                                         title={product.title}
                                         description={product.description}
@@ -204,7 +204,7 @@ function ProductList({ cartItems, setCartItems  }) {
                             return (
                                 <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                     <div className="card">
-                                        <div className="card-body">
+                                        <div className="card-body shop-card">
                                             <Product
                                             title={product.title}
                                             description={product.description}
@@ -244,7 +244,7 @@ function ProductList({ cartItems, setCartItems  }) {
                             return (
                                 <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                     <div className="card">
-                                        <div className="card-body">
+                                        <div className="card-body shop-card">
                                             <Product
                                             title={product.title}
                                             description={product.description}
@@ -283,7 +283,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                 return (
                                     <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
                                         <div className="card">
-                                            <div className="card-body">
+                                            <div className="card-body shop-card">
                                                 <Product
                                                 image_url={getImageFilePath(product.id)}
                                                 title={product.title}
