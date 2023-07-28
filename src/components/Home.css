@@ -19,10 +19,10 @@ body, html, p, h1, h2, h3, h4, h5, h6 {
     padding-top:10px;
 }
 
-.fruit-veg-img {
-    height: 300px;
-    width: 253.5px;
-    align-items: center;
+.home-card-img {
+  max-width: 90%;
+  height: auto;
+  padding-bottom: 20px;
 }
 
 .card-links {

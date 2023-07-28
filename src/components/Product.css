@@ -1,6 +1,6 @@
 .productImg{
-    height: 150px;
-    width: 200px;
+    max-width: 30%;
+  height: auto;
 }
 
 .gf-icon{
