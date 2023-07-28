@@ -75,6 +75,10 @@ async function addToCart(e) {
         quantity: totalQuantity,
         email_address: userEmail,
         order_items: cartItems, 
+        first_name: userfName,
+        last_name:  userlName,
+        address: userAddress,
+        phone_number: userPhoneNumber
       },
       { headers: { Accept: "application/json" } }
     );
@@ -120,10 +124,16 @@ async function addToCart(e) {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [userEmail, setUserEmail] = useState("");
   const [userfName, setUserFName] = useState("");
+  const [userlName, setUserLName] = useState("");
+  const [userAddress, setUserAddress] = useState("");
+  const [userPhoneNumber, setUserPhoneNumber] = useState("");
   const onSubmit = (data) => {
     setFormSubmitted(true);
     setUserEmail(data.email);
     setUserFName(data.name);
+    setUserLName(data.lastName);
+    setUserAddress(data.address);
+    setUserPhoneNumber(data.phoneNumber);
   };
 
   return (
