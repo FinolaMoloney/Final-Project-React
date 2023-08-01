@@ -102,12 +102,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                         Add to Cart
                                     </button><br/><br/>
                                     <div className="row">
-                                        <div className="col-sm-1">
+                                        <div className="col-sm-6">
                                             {product.gluten_free && (
                                                 <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
                                             )}
                                         </div>
-                                        <div className="col-sm-1">
+                                        <div className="col-sm-6">
                                             {product.diary_free && (
                                                 <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
                                             )}
@@ -141,12 +141,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                     Add to Cart
                                     </button><br/><br/>
                                     <div className="row">
-                                        <div className="col-sm-1">
+                                        <div className="col-sm-6">
                                             {product.gluten_free && (
                                                 <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
                                             )}
                                         </div>
-                                        <div className="col-sm-1">
+                                        <div className="col-sm-6">
                                             {product.diary_free && (
                                                 <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
                                             )}
@@ -181,12 +181,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                         Add to Cart
                                         </button><br/><br/>
                                         <div className="row">
-                                            <div className="col-sm-1">
+                                            <div className="col-sm-6">
                                                 {product.gluten_free && (
                                                     <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
                                                 )}
                                             </div>
-                                            <div className="col-sm-1">
+                                            <div className="col-sm-6">
                                                 {product.diary_free && (
                                                     <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
                                                 )}
@@ -221,12 +221,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                             Add to Cart
                                             </button><br/><br/>
                                             <div className="row">
-                                                <div className="col-sm-1">
+                                                <div className="col-sm-6">
                                                     {product.gluten_free && (
                                                         <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
                                                     )}
                                                 </div>
-                                                <div className="col-sm-1">
+                                                <div className="col-sm-6">
                                                     {product.diary_free && (
                                                         <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
                                                     )}
@@ -261,12 +261,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                             Add to Cart
                                             </button><br/><br/>
                                             <div className="row">
-                                                <div className="col-sm-1">
+                                                <div className="col-sm-6">
                                                     {product.gluten_free && (
                                                         <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
                                                     )}
                                                 </div>
-                                                <div className="col-sm-1">
+                                                <div className="col-sm-6">
                                                     {product.diary_free && (
                                                         <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
                                                     )}
@@ -300,12 +300,12 @@ function ProductList({ cartItems, setCartItems  }) {
                                                 Add to Cart
                                                 </button><br/><br/>
                                                 <div className="row">
-                                                    <div className="col-sm-1">
+                                                    <div className="col-sm-6">
                                                         {product.gluten_free && (
                                                             <img src={NourishAndSproutGFIcon} alt="Gluten-Free Icon" className="gf-icon" />
                                                         )}
                                                     </div>
-                                                    <div className="col-sm-1">
+                                                    <div className="col-sm-6">
                                                         {product.diary_free && (
                                                             <img src={NourishAndSproutDFIcon} alt="Diary-Free Icon" className="df-icon" />
                                                         )}

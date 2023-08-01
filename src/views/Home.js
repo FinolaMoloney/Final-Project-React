@@ -46,15 +46,15 @@ function Home(){
                 </div>
             </div>
             <div className="row card-links">
-                <div className="card-body col-sm-3">
+                <div className="card-body home-card col-sm-3">
                     <Link to='/gluten-free'><h3>Find out more about our Coeliec Range here<br/><br/></h3>
                     <img className="card-text home-card-img" src={NourishAndSproutGlutenFreeImg} alt="NourishAndSproutFreshVeg"/></Link>
                 </div>
-                <div className="card-body col-sm-3">
+                <div className="card-body home-card col-sm-3">
                     <Link to='/diary-free'><h3>Find out more about our diary free range here<br/><br/></h3>
                     <img className="card-text home-card-img" src={NourishAndSproutFreshVeg} alt="NourishAndSproutFreshVeg" /></Link>
                 </div>
-                <div className="card-body col-sm-3">
+                <div className="card-body home-card col-sm-3">
                     <Link to='/products'><h3>Shop all products here<br/><br/></h3>
                     <img className="card-text home-card-img" src={NourishAndSproutIcePops} alt="NourishAndSproutIcePops" /></Link>
                 </div>
