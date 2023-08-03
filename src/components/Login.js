@@ -29,7 +29,7 @@ function Login() {
     e.preventDefault();
     try {
       const response = await axios.get(
-        'http://127.0.0.1:4000/customers',
+        'http://63.32.111.36:4000/customers',
         { headers: { Accept: 'application/json' }})
 
       // Find the customer with matching email and password
@@ -79,7 +79,7 @@ function Login() {
         };
     
         // Make the API call to update the customer details
-        const response = await axios.put(`http://127.0.0.1:4000/customers/${user}`, updatedCustomerData, {
+        const response = await axios.put(`http://63.32.111.36:4000/customers/${user}`, updatedCustomerData, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
@@ -109,7 +109,7 @@ function Login() {
   useEffect(() => {
     async function fetchOrderEmail() {
       try {
-        const response = await axios.get(`http://127.0.0.1:4000/customers/${user}`, {
+        const response = await axios.get(`http://63.32.111.36:4000/customers/${user}`, {
           headers: { Accept: 'application/json' },
         });
         setOrderEmail(response.data.email_address);
@@ -122,7 +122,7 @@ function Login() {
   
   const handleOrderHistoryCheck = async (data) => {
     try {
-      const response = await axios.get('http://127.0.0.1:4000/orders', {
+      const response = await axios.get('http://63.32.111.36:4000/orders', {
         headers: { Accept: 'application/json' },
       });
       const orders = response.data;
