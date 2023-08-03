@@ -39,7 +39,7 @@ function ProductList({ cartItems, setCartItems  }) {
     };
 
     function getImageFilePath(productId) {
-        return `${process.env.PUBLIC_URL}/images/products/NourishAndSprout${productId}.jpg`;
+        return `${process.env.PUBLIC_URL}/images/products/NourishAndSprout${productId}.webp`;
     }
        
     return (
