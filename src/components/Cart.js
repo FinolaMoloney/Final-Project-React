@@ -15,12 +15,9 @@ function Cart({ cartItems, setCartItems, user}) {
   const [grossCost, setGrossCost] = useState([]);
   const [totalItems, setTotalItems] = useState([])
 
- //Return cart items 
+ //Update cart items 
   useEffect(() => {
-  async function fetchData () {
-    const response = await axios.get("http://localhost:4000/orders", {
-      headers: { Accept: "application/json" },
-    });
+   function fetchData () {
     setItemCount(cartItems.length)
     const convertedPrice = cartItems.map(({ price }) => parseFloat(price)).reduce((a, b) => a + b, 0);
     setConvertPrice(convertedPrice);
@@ -53,12 +50,10 @@ function Cart({ cartItems, setCartItems, user}) {
 async function addToCart(e) {
   e.preventDefault();
   if (cartItems.length === 0) {
-    console.log("No items in the cart");
     return setEmptyMsg("Oops looks like your cart is empty, please add items before checking out!");
   }
   const totalQuantity = cartItems.reduce((total, item) => total + item.quantity, 0);
   if (totalQuantity === 0) {
-    console.log("Cart is empty");
     return setEmptyMsg("Oops looks like your cart is empty, please add items before checking out!");
   }
 

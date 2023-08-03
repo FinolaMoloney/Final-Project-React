@@ -95,12 +95,14 @@ function ProductList({ cartItems, setCartItems  }) {
                                     price={'€'+product.price}
                                     stock={product.stock} gluten_free={product.gluten_free} diary_free={product.diary_free} image_url={getImageFilePath(product.id)}
                                     />
-                                    <button
-                                    className="btn btn-outline-secondary btn-sm"
-                                    onClick={() => addItemToCart(index)}
-                                    >
-                                        Add to Cart
-                                    </button><br/><br/>
+                                    {product.stock && (
+                                                    <button
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    onClick={() => addItemToCart(index)}
+                                                    >
+                                                    Add to Cart
+                                                    </button>
+                                                 )}<br/><br/>
                                     <div className="row">
                                         <div className="col-sm-6">
                                             {product.gluten_free && (
@@ -134,12 +136,14 @@ function ProductList({ cartItems, setCartItems  }) {
                                     diary_free={product.diary_free}
                                     image_url={getImageFilePath(product.id)}
                                     />
-                                    <button
-                                    className="btn btn-outline-secondary btn-sm"
-                                    onClick={() => addItemToCart(index)}
-                                    >
-                                    Add to Cart
-                                    </button><br/><br/>
+                                    {product.stock && (
+                                                    <button
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    onClick={() => addItemToCart(index)}
+                                                    >
+                                                    Add to Cart
+                                                    </button>
+                                                 )}<br/><br/>
                                     <div className="row">
                                         <div className="col-sm-6">
                                             {product.gluten_free && (
@@ -174,12 +178,14 @@ function ProductList({ cartItems, setCartItems  }) {
                                         diary_free={product.diary_free}
                                         image_url={getImageFilePath(product.id)}
                                         />
-                                        <button
-                                        className="btn btn-outline-secondary btn-sm"
-                                        onClick={() => addItemToCart(index)}
-                                        >
-                                        Add to Cart
-                                        </button><br/><br/>
+                                       {product.stock && (
+                                                    <button
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    onClick={() => addItemToCart(index)}
+                                                    >
+                                                    Add to Cart
+                                                    </button>
+                                                 )}<br/><br/>
                                         <div className="row">
                                             <div className="col-sm-6">
                                                 {product.gluten_free && (
@@ -214,12 +220,14 @@ function ProductList({ cartItems, setCartItems  }) {
                                             diary_free={product.diary_free}
                                             image_url={getImageFilePath(product.id)}
                                             />
-                                            <button
-                                            className="btn btn-outline-secondary btn-sm"
-                                            onClick={() => addItemToCart(index)}
-                                            >
-                                            Add to Cart
-                                            </button><br/><br/>
+                                           {product.stock && (
+                                                    <button
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    onClick={() => addItemToCart(index)}
+                                                    >
+                                                    Add to Cart
+                                                    </button>
+                                                 )}<br/><br/>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     {product.gluten_free && (
@@ -254,12 +262,14 @@ function ProductList({ cartItems, setCartItems  }) {
                                             diary_free={product.diary_free}
                                             image_url={getImageFilePath(product.id)}
                                             />
-                                            <button
-                                            className="btn btn-outline-secondary btn-sm"
-                                            onClick={() => addItemToCart(index)}
-                                            >
-                                            Add to Cart
-                                            </button><br/><br/>
+                                            {product.stock && (
+                                                    <button
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    onClick={() => addItemToCart(index)}
+                                                    >
+                                                    Add to Cart
+                                                    </button>
+                                                 )}<br/><br/>
                                             <div className="row">
                                                 <div className="col-sm-6">
                                                     {product.gluten_free && (
@@ -293,12 +303,14 @@ function ProductList({ cartItems, setCartItems  }) {
                                                 gluten_free={product.gluten_free}
                                                 diary_free={product.diary_free}
                                                 />
-                                                <button
-                                                className="btn btn-outline-secondary btn-sm"
-                                                onClick={() => addItemToCart(index)}
-                                                >
-                                                Add to Cart
-                                                </button><br/><br/>
+                                                {product.stock && (
+                                                    <button
+                                                    className="btn btn-outline-secondary btn-sm"
+                                                    onClick={() => addItemToCart(index)}
+                                                    >
+                                                    Add to Cart
+                                                    </button>
+                                                 )}<br/><br/>
                                                 <div className="row">
                                                     <div className="col-sm-6">
                                                         {product.gluten_free && (
@@ -318,8 +330,8 @@ function ProductList({ cartItems, setCartItems  }) {
                                 }
                     return null;
                     })}
-                    <div class="row">
-				        <button class="col-sm-1 btn btn-outline-secondary btn-sm"><Link to="back" smooth={true} duration={500}>Back to Top</Link></button>
+                    <div className="row">
+				        <button className="col-sm-1 btn btn-outline-secondary btn-sm"><Link to="back" smooth={true} duration={500}>Back to Top</Link></button>
                         <small className="col-sm-11 disclaimer">*Please note all products marked with DF are diary free and all products marked with GF are gluten free</small>
 			        </div>
                 </div>
