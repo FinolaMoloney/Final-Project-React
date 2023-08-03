@@ -19,7 +19,7 @@ function Signup() {
         async function createUser() {
           try {
             const response = await axios.post(
-              "http://63.32.111.36:4000/customers",
+              "http://3.249.160.92:4000/customers",
               {
                 first_name: userfName,
                 last_name: userlName,
@@ -48,7 +48,7 @@ function Signup() {
         // Check if the email is already in use
         try {
         const response = await axios.get(
-          'http://63.32.111.36:4000/customers',
+          'http://3.249.160.92:4000/customers',
           { headers: { Accept: 'application/json' }}
         );
         const customers = response.data;
