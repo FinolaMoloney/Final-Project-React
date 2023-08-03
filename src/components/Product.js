@@ -17,12 +17,6 @@ function Product(props) {
             <p>
                 {props.stock ? "" : "This product is currently out of stock, please check back soon!"}
             </p>
-            {/*
-            <small>
-                {props.gluten_free ? "" : " *Contains Gluten "}
-                {props.diary_free ? "" : " *Contains Dairy "}
-            </small>
-            </p>*/}
         </div>
     )
 }

@@ -2,10 +2,7 @@ import { Link } from 'react-router-dom';
 import Carousel from 'react-bootstrap/Carousel';
 import '../components/Home.css';
 import NourishAndSproutHomeImage from '../images/home/NourishAndSproutHomeImage.webp';
-import NourishAndSproutBabySoupAndVeg from '../images/home/NourishAndSproutBabySoupAndVeg.jpg';
-import NourishAndSproutFreshVeg from '../images/home/NourishAndSproutFreshVeg.jpg';
-import NourishAndSproutGlutenFreeImg from '../images/home/NourishAndSproutGlutenFreeImg.jpg';
-import NourishAndSproutIcePops from '../images/home/NourishAndSproutIcePops.jpg';
+import NourishAndSproutBabySoupAndVeg from '../images/home/NourishAndSproutBabySoupAndVeg.webp';
 
 function Home(){
     return(
@@ -48,15 +45,13 @@ function Home(){
             <div className="row card-links">
                 <div className="card-body home-card col-sm-3">
                     <Link to='/gluten-free'><h3>Find out more about our Coeliec Range here<br/><br/></h3>
-                    <img className="card-text home-card-img" src={NourishAndSproutGlutenFreeImg} alt="NourishAndSproutFreshVeg"/></Link>
+                    </Link>
                 </div>
                 <div className="card-body home-card col-sm-3">
-                    <Link to='/diary-free'><h3>Find out more about our diary free range here<br/><br/></h3>
-                    <img className="card-text home-card-img" src={NourishAndSproutFreshVeg} alt="NourishAndSproutFreshVeg" /></Link>
+                    <Link to='/diary-free'><h3>Find out more about our diary free range here<br/><br/></h3></Link>
                 </div>
                 <div className="card-body home-card col-sm-3">
-                    <Link to='/products'><h3>Shop all products here<br/><br/></h3>
-                    <img className="card-text home-card-img" src={NourishAndSproutIcePops} alt="NourishAndSproutIcePops" /></Link>
+                    <Link to='/products'><h3>Shop all products here<br/><br/></h3></Link>
                 </div>
             </div>
         </div>

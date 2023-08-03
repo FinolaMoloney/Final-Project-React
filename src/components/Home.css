@@ -30,7 +30,11 @@ body, html, p, h1, h2, h3, h4, h5, h6 {
 }
 
 .home-card {
-    height: 450px;
+    height: 200px;
+    justify-content:center;
+    align-items: center;
+    display:flex;
+    background-image: url('../images/home/NourishAndSproutBackground.jpg');
 }
 .card-body {
     background-color: white; 
