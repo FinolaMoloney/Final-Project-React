@@ -2,7 +2,6 @@
   "name": "nourishandsprout-react-client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://finolamoloney.github.io/Final-Project-React/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -31,8 +30,8 @@
     "workbox-streams": "^6.6.0"
   },
   "scripts": {
-    "start": "node --max-old-space-size=512 server.js",
-    "build": "react-scripts build",
+    "start": "react-scripts start",
+    "build": "set \"NODE_ENV=production\" && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
