@@ -22,7 +22,7 @@ function DiaryFreeProducts() {
     };
 
     function getImageFilePath(productId) {
-        return `${process.env.PUBLIC_URL}/images/products/NourishAndSprout${productId}.jpg`;
+        return `${process.env.PUBLIC_URL}/images/products/NourishAndSprout${productId}.webp`;
     }
       
     return (
@@ -42,7 +42,7 @@ function DiaryFreeProducts() {
                     product.diary_free
                   ) {
                     return (
-                        <div className="col-sm-5 mb-3 mb-sm-5" key={index}>
+                        <div className="col-sm-5 col-lg-4 mb-3 mb-sm-5" key={index}>
                             <div className="card h-100">
                                 <div className="card-body shop-card">
                                     <Product

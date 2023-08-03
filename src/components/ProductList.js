@@ -86,7 +86,7 @@ function ProductList({ cartItems, setCartItems  }) {
                         product.gluten_free
                     ) {
                     return (
-                        <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
+                        <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                             <div className="card">
                                 <div className="card-body shop-card">
                                     <Product
@@ -124,7 +124,7 @@ function ProductList({ cartItems, setCartItems  }) {
                     product.diary_free
                     ) {
                     return (
-                        <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
+                        <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                             <div className="card">
                                 <div className="card-body shop-card">
                                     <Product
@@ -166,7 +166,7 @@ function ProductList({ cartItems, setCartItems  }) {
                         product.months_6_to_12
                         ) {
                         return (
-                            <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
+                            <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                                 <div className="card">
                                     <div className="card-body shop-card">
                                         <Product
@@ -208,7 +208,7 @@ function ProductList({ cartItems, setCartItems  }) {
                             product.years_1_to_2
                             ) {
                             return (
-                                <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
+                                <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                                     <div className="card">
                                         <div className="card-body shop-card">
                                             <Product
@@ -250,7 +250,7 @@ function ProductList({ cartItems, setCartItems  }) {
                             product.years_2_to_4
                             ) {
                             return (
-                                <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
+                                <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                                     <div className="card">
                                         <div className="card-body shop-card">
                                             <Product
@@ -291,7 +291,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                 (dietFilter === '' && ageFilter === '') 
                                 ) {
                                 return (
-                                    <div className="col-sm-5 mb-3 mb-sm-4" key={index}>
+                                    <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                                         <div className="card">
                                             <div className="card-body shop-card">
                                                 <Product
