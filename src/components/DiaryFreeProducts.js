@@ -11,7 +11,7 @@ function DiaryFreeProducts() {
     
     useEffect(() =>
     async function () {
-        var response = await axios.get("http://3.249.160.92:4000/products",
+        var response = await axios.get("http://34.242.174.80:4000/products",
         {headers: {Accept: "application/json"}})
         setProductList(response.data)
     }, [])
