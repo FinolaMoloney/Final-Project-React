@@ -14,7 +14,7 @@ function ProductList({ cartItems, setCartItems  }) {
     
     useEffect(() =>
     async function () {
-        var response = await axios.get("http://34.242.174.80:4000/products",
+        var response = await axios.get("http://3.250.199.113:4000/products",
         {headers: {Accept: "application/json"}})
         setProductList(response.data)
     }, [])
@@ -64,13 +64,11 @@ function ProductList({ cartItems, setCartItems  }) {
                     </div>
                     <div className="col-sm-8">
                             <h6>Filter by age group here</h6>
-
                             <select
                             value={ageFilter}
                             className="btn btn-outline-secondary btn-sm"
                             type="dropdown"
-                            onChange={handleAgeFilterChange}
-                            >
+                            onChange={handleAgeFilterChange}>
                                 <option value="">All</option>
                                 <option value="6-12M">6 Months+</option>
                                 <option value="1-2Y">1 Year+</option>
