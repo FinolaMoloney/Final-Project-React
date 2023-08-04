@@ -11,7 +11,7 @@ function GlutenFreeProducts() {
     
     useEffect(() =>
     async function () {
-        var response = await axios.get("http://34.242.53.203:4000/products",
+        var response = await axios.get("http://localhost:4000/products",
         {headers: {Accept: "application/json"}})
         setProductList(response.data)
     }, [])

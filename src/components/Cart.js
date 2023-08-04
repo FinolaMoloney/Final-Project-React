@@ -62,7 +62,7 @@ async function addToCart(e) {
 
   try {
     const response = await axios.post(
-      "http://34.242.53.203:4000/orders",
+      "http://localhost:4000/orders",
       {
         title: newOrderTitles,
         description: newOrderDescription,
