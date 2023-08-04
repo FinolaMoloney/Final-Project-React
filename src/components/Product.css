@@ -1,24 +1,20 @@
 .productImg{
     width: 170px;
-    height: 113px;;
+    height: 113px;
 }
-
 .gf-icon {
     height: 45px;
     width: 55px;
     float: right;
 }
-
 .df-icon{
     height: 45px;
     width: 55px;
     float: left;
 }
-
 .disclaimer{
     text-align: right;
 }
-
 .filters{
     margin-left: 1px;
 }
