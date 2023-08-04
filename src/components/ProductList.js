@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react';
+import {useState, useEffect, lazy, Suspense} from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Link} from 'react-scroll';
 import axios from 'axios';
@@ -6,6 +6,8 @@ import Product from './Product';
 import './Product.css'
 import NourishAndSproutGFIcon from '../images/products/NourishAndSproutGFIcon.jpg';
 import NourishAndSproutDFIcon from '../images/products/NourishAndSproutDFIcon.jpg';
+
+const LazyProduct = lazy(() => import('./Product'));
 
 function ProductList({ cartItems, setCartItems  }) {
     const [productList, setProductList] = useState([]);
@@ -292,7 +294,8 @@ function ProductList({ cartItems, setCartItems  }) {
                                     <div className="col-sm-5 col-lg-4 mb-3 mb-sm-4" key={index}>
                                         <div className="card">
                                             <div className="card-body shop-card">
-                                                <Product
+                                            <Suspense fallback={<div>Loading...</div>}>
+                                                <LazyProduct
                                                 image_url={getImageFilePath(product.id)}
                                                 title={product.title}
                                                 description={product.description}
@@ -301,6 +304,7 @@ function ProductList({ cartItems, setCartItems  }) {
                                                 gluten_free={product.gluten_free}
                                                 diary_free={product.diary_free}
                                                 />
+                                            </Suspense>
                                                 {product.stock && (
                                                     <button
                                                     className="btn btn-outline-secondary btn-sm"
