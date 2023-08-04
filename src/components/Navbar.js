@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import NourishAndSproutBasket from '../images/home/NourishAndSproutBasket.jpg';
-import NourishAndSproutSmallLogo from '../images/home/NourishAndSproutSmallLogo.jpg';
+import NourishAndSproutSmallLogo from '../images/home/NourishAndSproutSmallLogo.webp';
 
 function Navbar() {
     return (
