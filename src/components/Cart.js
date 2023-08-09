@@ -147,7 +147,7 @@ async function addToCart(e) {
                 <table>
                   <thead>
                   <tr>
-                    <th className="col-sm-3">Product:</th><th className="col-sm-6">Description:</th><th className="col-sm-2">Price:</th><th className="col-sm-1">Quality:</th>
+                    <th className="col-sm-3">Product:</th><th className="col-sm-6">Description:</th><th className="col-sm-2">Price:</th><th className="col-sm-1">Quantity:</th>
                   </tr>
                   </thead>
                   <tbody>

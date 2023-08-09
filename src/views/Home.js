@@ -44,7 +44,7 @@ function Home(){
             </div>
             <div className="row card-links">
                 <div className="card-body home-card col-sm-3">
-                    <Link to='/gluten-free'><h3>Find out more about our Coeliec Range here<br/><br/></h3>
+                    <Link to='/gluten-free'><h3>Find out more about our coeliac range here<br/><br/></h3>
                     </Link>
                 </div>
                 <div className="card-body home-card col-sm-3">

@@ -141,6 +141,17 @@ function Login() {
     }
   };
 
+  //convert the date so that its just YYYY-MM-DD
+  function formatDate(dateString) {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    
+    return `${year}-${month}-${day}`;
+  }
+  
+
   return (
     <div className="background">
       <div className="row banner">
@@ -198,8 +209,8 @@ function Login() {
                             .map(order => (
                               <div key={order.id}>
                                 <h4>Order ID: {order.id}</h4>
-                                <p>Title: {order.title}</p>
-                                <p>Description: {order.description}</p>
+                                <p>Date: {formatDate(order.created_at)}</p>
+                                <p>Product name(s): {order.title}</p>
                                 <p>Price: {order.price}</p>
                                 <p>Email Address: {order.email_address}</p>
                                 <hr />
