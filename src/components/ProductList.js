@@ -64,20 +64,23 @@ function ProductList({ cartItems, setCartItems  }) {
                             <option value="diary">Diary Free</option>
                         </select>
                     </div>
-                    <div className="col-sm-8">
-                            <h6>Filter by age group here</h6>
-                            <select
-                            value={ageFilter}
-                            className="btn btn-outline-secondary btn-sm"
-                            type="dropdown"
-                            onChange={handleAgeFilterChange}>
-                                <option value="">All</option>
-                                <option value="6-12M">6 Months+</option>
-                                <option value="1-2Y">1 Year+</option>
-                                <option value="2-4Y">2 Years+</option>
-                            </select>
-                        </div>
+                    <div className="col-sm-3">
+                        <h6>Filter by age group here</h6>
+                        <select
+                        value={ageFilter}
+                        className="btn btn-outline-secondary btn-sm"
+                        type="dropdown"
+                        onChange={handleAgeFilterChange}>
+                            <option value="">All</option>
+                            <option value="6-12M">6 Months+</option>
+                            <option value="1-2Y">1 Year+</option>
+                            <option value="2-4Y">2 Years+</option>
+                        </select>
                     </div>
+                    <div className="col-sm-5">
+                        <small className="col-sm-11 disclaimer">*Please note all products marked with DF are diary free and all products marked with GF are gluten free</small>
+                    </div>
+                </div>
                 <div className="row">
                     {productList.map(function (product, index) {
                         const imageFilePath = getImageFilePath(product.id);
@@ -334,7 +337,6 @@ function ProductList({ cartItems, setCartItems  }) {
                     })}
                     <div className="row">
 				        <button className="col-sm-1 btn btn-outline-secondary btn-sm"><Link to="back" smooth={true} duration={500}>Back to Top</Link></button>
-                        <small className="col-sm-11 disclaimer">*Please note all products marked with DF are diary free and all products marked with GF are gluten free</small>
 			        </div>
                 </div>
             </div>
